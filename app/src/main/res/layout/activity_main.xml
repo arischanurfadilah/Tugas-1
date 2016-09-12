@@ -64,11 +64,11 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jurusan"
+            android:text="Jenis Kelamin"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <RadioGroup
-            android:id="@+id/jurusan"
+            android:id="@+id/jk"
             android:layout_width="331dp"
             android:layout_height="43dp"
             android:orientation="horizontal">
