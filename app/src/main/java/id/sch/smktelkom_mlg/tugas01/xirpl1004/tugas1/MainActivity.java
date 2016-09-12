@@ -52,7 +52,24 @@ public class MainActivity extends AppCompatActivity {
         String prov = provinsi.getSelectedItem().toString();
         String jenis = lk.getText().toString();
         pr.getText().toString();
+        pr.getText().toString();
         String minat = "";
+
+        if (namaa.isEmpty()) {
+            nama.setError("Nama belum diisi");
+        } else {
+            nama.setError(null);
+        }
+
+
+        if (lk.isChecked()) {
+            jenis = lk.getText().toString();
+        } else if (pr.isChecked()) {
+            jenis = pr.getText().toString();
+        } else {
+            jenis = "Tambahkan jenis kelamin Anda";
+        }
+
 
         if (rpl.isChecked()) {
             minat += rpl.getText() + "";
@@ -60,9 +77,13 @@ public class MainActivity extends AppCompatActivity {
             minat += tkj.getText() + "";
         } else if (mm.isChecked()) {
             minat += mm.getText() + "";
+        } else {
+            minat += "Anda belum memilih bidang";
         }
+
 
         hasil.setText("Nama Anda " + namaa + "\nAsal Anda " + prov + "\nJenis Kelamin " + jenis + "\nBidang Yang Dipilih " + minat);
 
     }
+
 }
